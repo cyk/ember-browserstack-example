@@ -12,5 +12,5 @@ test('visiting /', function(assert) {
 test('taking a detour', function(assert) {
   visit('/detour');
   click('.continue');
-  andThen(() => assert.equal(currentURL(), '/'));
+  andThen(() => assert.equal(currentRouteName(), 'index'));
 });
