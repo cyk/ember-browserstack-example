@@ -35,4 +35,13 @@ module.exports = {
       'protocol': 'browser'
     }
   },
+
+  browser_args: {
+    'Chrome': [
+      '--headless',
+      '--incognito',
+      '--disable-gpu',
+      '--remote-debugging-port=9222'
+    ]
+  }
 };

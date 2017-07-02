@@ -1,21 +1,27 @@
 ---
+dist: trusty
 language: node_js
 node_js:
-  - "6"
+  - 6
 
-sudo: false
+addons:
+  chrome: stable
 
-cache:
-  directories:
-    - $HOME/.npm
-
-before_install:
-  - npm config set spin false
-  - npm install -g phantomjs-prebuilt
-  - phantomjs --version
+cache: yarn
 
 install:
-  - npm install
+  - yarn install
+  - yarn global add codecov
+
+before_script:
+  # Replace the process spawned by the addon with our own
+  # - $HOME/.browserstack/BrowserStackLocal -F -k $BROWSERSTACK_ACCESS_KEY --daemon start
 
 script:
-  - npm test
+  - ember build --environment "test"
+  - COVERAGE=true ember test --path "dist" -l "Chrome"
+  # - ember test --test-port 8000 --path "dist" --filter "Acceptance" --query "nolint&devmode"
+
+after_success:
+  - codecov
+  - ember build --environment "production"
