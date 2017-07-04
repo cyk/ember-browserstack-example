@@ -9,17 +9,15 @@
 <p align="center">
  <a href="https://travis-ci.org/cyk/ember-browserstack-example"><img src="https://travis-ci.org/cyk/ember-browserstack-example.svg?branch=master" alt="Build Status"></a>
  <a href="(https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/cyk/ember-browserstack-example.svg" alt="Greenkeeper badge"></a>
-  <a href="https://codecov.io/gh/cyk/ember-browserstack-example">
+<!--   <a href="https://codecov.io/gh/cyk/ember-browserstack-example">
     <img src="https://codecov.io/gh/cyk/ember-browserstack-example/branch/master/graph/badge.svg" alt="Codecov" />
-  </a>
+  </a> -->
 </p>
 
 
 ## Introduction
 
-This application is an example implementation of the ideas presented in the blog post ["Ember CLI testing with BrowserStack"](https://medium.com/@cyk/ember-cli-testing-with-browserstack-dead60eecbb1). 
-
-It includes:
+This application is an example implementation of the ideas presented in the blog post ["Ember CLI testing with BrowserStack"](https://medium.com/@cyk/ember-cli-testing-with-browserstack-dead60eecbb1). It includes:
 * Cross-browser UI testing using [BrowserStack Local](https://www.browserstack.com/local-testing) and [REST API](https://www.browserstack.com/automate/rest-api)
 * Travis CI BrowserStack addon integration
 
