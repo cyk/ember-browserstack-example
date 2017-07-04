@@ -9,19 +9,21 @@
 <p align="center">
  <a href="https://travis-ci.org/cyk/ember-browserstack-example"><img src="https://travis-ci.org/cyk/ember-browserstack-example.svg?branch=master" alt="Build Status"></a>
  <a href="(https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/cyk/ember-browserstack-example.svg" alt="Greenkeeper badge"></a>
- <!--<a href="https://codecov.io/gh/cyk/ember-browserstack-example"><img src="https://codecov.io/gh/cyk/ember-browserstack-example/branch/master/graph/badge.svg?token=xxxxxxxxx" alt="Codecov" /></a>-->
+  <a href="https://codecov.io/gh/cyk/ember-browserstack-example">
+    <img src="https://codecov.io/gh/cyk/ember-browserstack-example/branch/master/graph/badge.svg" alt="Codecov" />
+  </a>
 </p>
 
 
 ## Introduction
 
-This application is an example implementation of the ideas presented in the blog post ["Ember CLI testing with BrowserStack"](). 
+This application is an example implementation of the ideas presented in the blog post ["Ember CLI testing with BrowserStack"](https://medium.com/@cyk/ember-cli-testing-with-browserstack-dead60eecbb1). 
 
 It includes:
 * Cross-browser UI testing using [BrowserStack Local](https://www.browserstack.com/local-testing) and [REST API](https://www.browserstack.com/automate/rest-api)
 * Travis CI BrowserStack addon integration
 
-Read more about it (and the gotchas) on [the blog post]().
+Read more about it (and the gotchas) on [the blog post](https://medium.com/@cyk/ember-cli-testing-with-browserstack-dead60eecbb1).
 
 ## Prerequisites
 
@@ -68,6 +70,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * [ember.js](http://emberjs.com/)
 * [ember-cli](https://ember-cli.com/)
+* [browserstack/api](https://github.com/browserstack/api) - Spec of latest BrowserStack JavaScript testing api
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
