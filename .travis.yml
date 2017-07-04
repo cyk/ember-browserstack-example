@@ -6,6 +6,10 @@ node_js:
 
 addons:
   chrome: stable
+  browserstack:
+    username: cyklassen2
+    access_key:
+      secure: ArLALPT6lbOsAkBL4WdUgfamv6nmBNLyZIi0b57CtxK/H9k/XdNoEoRN0NzQGgE/uHlaDZhEa7gwLiB7+758jbVUnNprjjYOaPQxcC5IFT3RIpLGcHtZ0PCu9DgBqcZBxECw37GYtEtsZdQZ4KTQT5pMCJ2WlDeiiGsBvNsDHEJora0LtCB0JY+RLkXF5ahhxQFEicyWuQUJFguxDw0ZTYxeLGmSDrY0rHortxrf/IMNHhZsW7U3ouYYevK3yEBEVrz276cll7Ns4fCqz19Wa6S4ZE31ZRZppJJ4YdKXzDk7OEQvcAeJmYjncF6lJZ74jK0IgdiCGHH7+89zxP15hnl+w80gdH2vOY3nf8DhskieCus0JcNyDUPpA0rmONvK23gWZZSpMACNoH0PuZnx0SEmbYyFd5bGMcJvlnxdz9MV5iyvXgjngvUiIqFQA7iuVhaRNCzOBQxh9rltNaE7F4no5tzlA5zFCKflDxVAaxpVPElhPVgx76xVo7de85nP4NlxAvw3A5HU5T4x7CLJFSMPJ3dEsoZlD7S4ItqCP+UckgHO3V3E8P3/tn4S6du4vg3EzaQ0pQJ4oKlLGRYCrZ5wtdWvUNFU85MGES0Qqtm8WbJOla9rKHUKfPYgU2rMs5fvUw1L2fI7CQ82lgG9395DUW9V5hPbsXeOoxYMiyQ=
 
 cache: yarn
 
@@ -15,12 +19,12 @@ install:
 
 before_script:
   # Replace the process spawned by the addon with our own
-  # - $HOME/.browserstack/BrowserStackLocal -F -k $BROWSERSTACK_ACCESS_KEY --daemon start
+  - $HOME/.browserstack/BrowserStackLocal -F -k $BROWSERSTACK_ACCESS_KEY --daemon start
 
 script:
   - ember build --environment "test"
   - COVERAGE=true ember test --path "dist" -l "Chrome"
-  # - ember test --test-port 8000 --path "dist" --filter "Acceptance" --query "nolint&devmode"
+  - ember test --test-port 8000 --path "dist" --filter "Acceptance" --query "nolint&devmode"
 
 after_success:
   - codecov
