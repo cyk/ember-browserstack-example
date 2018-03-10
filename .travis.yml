@@ -35,3 +35,7 @@ after_script:
 after_success:
   - codecov
   - ember build --environment "production"
+
+
+# https://github.com/travis-ci/travis-ci/issues/8836#issuecomment-356362524
+sudo: required
